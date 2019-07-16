@@ -1,5 +1,5 @@
-import React from 'react';
-import "./App.css";
+import React from 'react'
+import "./App.css"
 import Scoreboard from './components/Scoreboard'
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
         <Scoreboard />
       </main>
     </div>
-  );
+  )
 }
 
 export default App
