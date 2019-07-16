@@ -5,7 +5,7 @@ import Scoreboard from './components/Scoreboard';
 function App() {
   return (
     <div>
-      <Title content="Hello World!"/>
+      <Title content="Scoreboard App"/>
       <main>
         <Scoreboard />
       </main>
