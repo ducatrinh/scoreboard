@@ -1,11 +1,10 @@
 import React from 'react';
-import Title from './components/Title'
-import Scoreboard from './components/Scoreboard';
+import "./App.css";
+import Scoreboard from './components/Scoreboard'
 
 function App() {
   return (
-    <div>
-      <Title content="Hello World!"/>
+    <div className="app">
       <main>
         <Scoreboard />
       </main>
@@ -13,4 +12,4 @@ function App() {
   );
 }
 
-export default App;
+export default App
