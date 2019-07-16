@@ -1,12 +1,13 @@
 import React, { Component } from "react"
 import Player from "./Player"
+import "./Scoreboard.css"
 
 export default class Scoreboard extends Component {
     state = {
         players: [
-            { id: 1, name: "Arien", score: 2 },
-            { id: 2, name: "David", score: 5 }, 
-            { id: 3, name: "Mimi", score: 4 }
+            { id: 1, name: "Duc", score: 5 },
+            { id: 2, name: "Anh", score: 8 }, 
+            { id: 3, name: "Trinh", score: 6 }
         ]
     }
     
@@ -16,6 +17,7 @@ export default class Scoreboard extends Component {
 
         return (
             <div className="scoreboard">
+                <h1>Scoreboard</h1>
                 <ul>
                 {players_copy.map(this.renderPlayer)}
                 </ul>
@@ -30,7 +32,21 @@ export default class Scoreboard extends Component {
             name = {player.name}
             score = {player.score}
             key = {player.id}
+            incrementScore={this.incrementScoreOfPlayer}
             />
         )
+    }
+
+    incrementScoreOfPlayer = (id) => {
+        const updatedPlayers = this.state.players.map(player => {
+            if (player.id === id) {
+                return { ...player, score: player.score + 1}
+            }
+            else {
+                return player
+            }
+        })
+
+        this.setState({ players: updatedPlayers })
     }
 }
